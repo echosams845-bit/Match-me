@@ -1,131 +1,39 @@
-:root {
-    --pink: #ff00ff;
-    --cyan: #00f3ff;
-    --glass: rgba(255, 255, 255, 0.1);
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background: #050505 url('1234567.jpg') no-repeat center center fixed;
+    background: url('1234567.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Rajdhani', sans-serif;
-    color: white;
-    height: 100vh;
+    margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-}
-
-/* Glassmorphism Effect */
-.glass-container {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 90%;
-    max-width: 380px;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    z-index: 10;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
+    height: 100vh;
     color: white;
-    text-shadow: 0 0 10px var(--pink), 0 0 20px var(--pink);
-    margin-bottom: 5px;
 }
 
-.tagline {
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    color: var(--cyan);
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px var(--cyan);
-}
+.main-title { font-size: 3rem; margin: 10px 0; }
+#timer { font-size: 2rem; color: #00f3ff; margin-bottom: 20px; }
 
-.stats-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.stat-item .label {
-    display: block;
-    font-size: 0.7rem;
-    color: #aaa;
-}
-
-.stat-item .value {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--cyan);
-}
-
-/* 4x4 Grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-bottom: 25px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border: 2px solid #00f3ff;
 }
 
 .card {
-    aspect-ratio: 1;
-    background: var(--glass);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    background: #111;
+    border: 1px solid #00f3ff;
     cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
 }
 
-.card.flipped {
-    background: var(--pink);
-    border-color: white;
-    box-shadow: 0 0 15px var(--pink);
-    transform: rotateY(180deg);
-}
-
-/* Catchy Telegram Button */
-.tg-button {
-    display: block;
-    background: linear-gradient(45deg, #0088cc, #00f3ff);
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
-    transition: 0.3s;
-}
-
-.tg-button:active {
-    transform: scale(0.95);
-}
-
-/* Nate Character Placement */
 #game-char {
     position: fixed;
-    bottom: -10px;
-    right: -20px;
-    width: 160px;
-    height: auto;
-    z-index: 5;
-    opacity: 0.9;
-    pointer-events: none;
-    filter: drop-shadow(0 0 10px var(--pink));
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: -1;
 }

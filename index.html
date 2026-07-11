@@ -2,41 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EUPHORIA: MEMORY ARENA</title>
-    <!-- Confetti Library -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-    <!-- Itinatali natin ang hiwalay na CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euphoria: Neon Trial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- START SCREEN -->
-    <div id="start-screen">
-        <div class="start-title">
-            EUPHORIA<br><span class="start-subtitle">MATCH ARENA</span>
+    <div class="glass-container">
+        <header>
+            <h1 class="glitch" data-text="EUPHORIA">EUPHORIA</h1>
+            <p class="tagline">NEON MEMORY ARENA</p>
+        </header>
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="label">TIME</span>
+                <span id="timer" class="value">01:30</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">MATCH</span>
+                <span id="score" class="value">0</span>
+            </div>
         </div>
-        <button class="enter-btn" onclick="startMatch()">ENTER ARENA</button>
+
+        <div class="grid" id="game-grid"></div>
+
+        <footer>
+            <a href="https://t.me/+iL-Xj34kepk1OGY1" class="tg-button">
+                <span>JOIN PRIVATE ACCESS</span>
+            </a>
+        </footer>
     </div>
 
-    <!-- GAME CONTAINER -->
-    <div id="game-wrapper">
-        <div class="timer-bar">
-            <div id="timer">02:00</div>
-        </div>
-        <div class="card-grid" id="card-grid"></div>
-        <a href="https://t.me/+_3vgsU8mHwJkYjdl" id="win-btn" class="win-btn">CLAIM REWARD</a>
-    </div>
+    <img src="123456.jpg" id="game-char" alt="Nate Overlay">
 
-    <!-- NATE TRANSPARENT CHARACTER OVERLAY -->
-    <img src="123456.jpg" id="game-char" class="character-overlay" alt="Euphoria Nate">
+    <audio id="bg-music" src="Euphoria.mp3" loop></audio>
 
-    <!-- AUDIO ENGINE -->
-    <audio id="bg-music" src="Euphoria.mp3" loop preload="auto"></audio>
-
-    <!-- Itinatali natin ang hiwalay na JavaScript file sa pinakababa -->
     <script src="main.js"></script>
 </body>
 </html>

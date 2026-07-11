@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EUPHORIA: MEMORY ARENA</title>
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Itinatali natin ang hiwalay na CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- START SCREEN -->
+    <div id="start-screen">
+        <div class="start-title">
+            EUPHORIA<br><span class="start-subtitle">MATCH ARENA</span>
+        </div>
+        <button class="enter-btn" onclick="startMatch()">ENTER ARENA</button>
+    </div>
+
+    <!-- GAME CONTAINER -->
+    <div id="game-wrapper">
+        <div class="timer-bar">
+            <div id="timer">02:00</div>
+        </div>
+        <div class="card-grid" id="card-grid"></div>
+        <a href="https://t.me/+_3vgsU8mHwJkYjdl" id="win-btn" class="win-btn">CLAIM REWARD</a>
+    </div>
+
+    <!-- NATE TRANSPARENT CHARACTER OVERLAY -->
+    <img src="123456.jpg" id="game-char" class="character-overlay" alt="Euphoria Nate">
+
+    <!-- AUDIO ENGINE -->
+    <audio id="bg-music" src="Euphoria.mp3" loop preload="auto"></audio>
+
+    <!-- Itinatali natin ang hiwalay na JavaScript file sa pinakababa -->
+    <script src="main.js"></script>
+</body>
+</html>
